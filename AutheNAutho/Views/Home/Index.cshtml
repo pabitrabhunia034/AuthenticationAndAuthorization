@@ -1,0 +1,5 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Welcome @(Session["WlcMsg"] != null? Session["WlcMsg"].ToString():"" )</h1>

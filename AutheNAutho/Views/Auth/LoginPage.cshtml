@@ -1,0 +1,21 @@
+﻿@model AutheNAutho.Models.LoginModel
+
+
+<form action="~/Auth/Login" method="post">
+    <label>@ViewBag.LoginMsg</label>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        @Html.TextBoxFor(x => x.Email, new { placeholder = "Email Address", @class = "form-control" })
+        @Html.ValidationMessageFor(x=>x.Email ,"",new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        @Html.PasswordFor(x => x.Password, new { placeholder = "Password", @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Password, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

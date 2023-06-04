@@ -1,0 +1,29 @@
+﻿<div class="container">
+    <h2>UserList</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (ViewBag.UserList != null)
+            {
+                List<AutheNAutho.Models.UserModel> lst = ViewBag.UserList;
+
+                foreach (AutheNAutho.Models.UserModel user in lst)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Name</td>
+                        <td>@user.Email</td>
+                    </tr>
+                }
+            }
+            
+        </tbody>
+    </table>
+</div>
+
